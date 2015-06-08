@@ -1,4 +1,4 @@
-#include "retrieve.h"
+﻿#include "retrieve.h"
 
 MEMEORY_ERROR ImageRetrieve::Retrieve(const vector<double> &feature, 
 									vector<FEATURE> &featureLib)

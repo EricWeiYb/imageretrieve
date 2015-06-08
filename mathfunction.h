@@ -1,4 +1,4 @@
-
+﻿
 #ifndef __MATH__FUNCTION__
 #define __MATH__FUNCTION__
 

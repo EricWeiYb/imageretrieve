@@ -1,4 +1,4 @@
-#ifndef __IMAGE__RETRIEVE__
+﻿#ifndef __IMAGE__RETRIEVE__
 #define __IMAGE__RETRIEVE__
 
 #include <iostream>

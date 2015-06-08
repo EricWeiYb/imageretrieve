@@ -1,4 +1,4 @@
-
+﻿
 #include "mathfunction.h"
 double Compare(const vector<double> &featureA, 
 			const vector<double> &featureB)
