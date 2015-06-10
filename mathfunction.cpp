@@ -1,6 +1,7 @@
 ﻿
 #include "mathfunction.h"
-double Compare(const vector<double> &featureA, 
+
+double MathFunction::Compare(const vector<double> &featureA, 
 			const vector<double> &featureB)
 {
 	double distance(0);
@@ -13,7 +14,7 @@ double Compare(const vector<double> &featureA,
 }
 
 
-double VectorDot(const vetor<double> &featureA,
+double MathFunction::VectorDot(const vetor<double> &featureA,
 				const vector<double> &featureB)
 {
 	double temp(0);
@@ -31,7 +32,7 @@ double VectorDot(const vetor<double> &featureA,
 
 
 
-double VectorLength(const vector<double> &feature)
+double MathFunction::VectorLength(const vector<double> &feature)
 {
 	double temp(0);
 	for(size_t i = 0; i != feature.size(); ++i)
@@ -42,7 +43,7 @@ double VectorLength(const vector<double> &feature)
 
 
 
-int VectorSub(const vetor<double> &featureA,
+int MathFunction::VectorSub(const vetor<double> &featureA,
 				const vector<double> &featureB,
 				vector<double> &output)
 {
@@ -60,7 +61,7 @@ int VectorSub(const vetor<double> &featureA,
 }
 
 
-int VectorMul(const vetor<double> &featureA,
+int MathFunction::VectorMul(const vetor<double> &featureA,
 				const vector<double> &featureB,
 				vector<double> &output)
 {
