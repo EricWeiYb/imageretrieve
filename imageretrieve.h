@@ -25,7 +25,7 @@ public:
 	MEMORY_ERROR ReadInform();
 	MEMORY_ERROR Retrieve(const vector<double> &feature, const vector<vector<double>> &featureLib);
 	double Compare(const vector<double> &featureA, const vector<double> &featureB);
-    MEMORY_ERROR GetSampleBase(string path);
+	MEMORY_ERROR GetSampleBase(const string &path);
 private:
 	std::vector<FeatureStruct> samples;
 };
