@@ -11,9 +11,7 @@ IOProcess::~IOProcess(void)
 }
 
 
-void IOProcess::ReadFile(const string &path,const vector<double> &features,const vector<string> &inform)
-{
-	void ReadClassify(const string &path,vector<vector<int>> &data)
+void IOProcess::ReadFile(const string &path,const vector<string> &features)
 {
 	FILE *fp;
 	char szBuf[1000];
@@ -21,33 +19,27 @@ void IOProcess::ReadFile(const string &path,const vector<double> &features,const
     while(infile.getline(szBuf,1000))
     {
     	istringstream s(szBuf)
-    	double classify(0);
-    	int height(0);
-    	int width(0);
-    	s>>classify>>height>>width;
-    	temp.push_back(classify);
-    	temp.push_back(height);
-    	temp.push_back(width);
-    	data.push_back(temp);
+    	string path;
+    	s>>path;
+    	features.push_back(path);
     }
     infile.close();
     return;
 }
-}
 
 
 
 
-void  IOProcess::WriteFile(const string &path,const vector<double> &features,const string &inform)
+void  IOProcess::WriteFile(const string &path,const vector<string> &features)
 {
-	ostringstream data;
-	data<<inform<<" ";
-	for (std::vector<double>::iterator i = features.begin(); i != features.end(); ++i)
+	string temp;
+	for (std::vector<string>::iterator i = features.begin(); i != features.end(); ++i)
 	{
-		data<<(*i)<<" ";
+		temp = (*i) + "\n";
+		Write(path,(*i).str());
 	}
 	data<<"\n";
-	Write(path,data.str());
+	
 }
 
 
