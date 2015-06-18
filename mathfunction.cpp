@@ -1,6 +1,7 @@
-﻿
+﻿#include "stdafx.h"
 #include "mathfunction.h"
 
+/*
 double MathFunction::Compare(const vector<double> &featureA, 
 			const vector<double> &featureB)
 {
@@ -10,11 +11,11 @@ double MathFunction::Compare(const vector<double> &featureA,
 		return -1;
 	}
 	int size = featureA.size();
-	return /*EulaDistan*/;
+	return EulaDistan;
 }
+*/
 
-
-double MathFunction::VectorDot(const vetor<double> &featureA,
+double MathFunction::VectorDot(const vector<double> &featureA,
 				const vector<double> &featureB)
 {
 	double temp(0);
@@ -43,7 +44,7 @@ double MathFunction::VectorLength(const vector<double> &feature)
 
 
 
-int MathFunction::VectorSub(const vetor<double> &featureA,
+int MathFunction::VectorSub(const vector<double> &featureA,
 				const vector<double> &featureB,
 				vector<double> &output)
 {
@@ -61,7 +62,7 @@ int MathFunction::VectorSub(const vetor<double> &featureA,
 }
 
 
-int MathFunction::VectorMul(const vetor<double> &featureA,
+int MathFunction::VectorMul(const vector<double> &featureA,
 				const vector<double> &featureB,
 				vector<double> &output)
 {
@@ -77,3 +78,4 @@ int MathFunction::VectorMul(const vetor<double> &featureA,
 	}
 	return 1;
 }
+

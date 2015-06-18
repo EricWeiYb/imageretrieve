@@ -1,4 +1,5 @@
-﻿#include "io.h"
+﻿#include "stdafx.h"
+#include "io.h"
 
 
 IOProcess::IOProcess(void)
@@ -11,17 +12,13 @@ IOProcess::~IOProcess(void)
 }
 
 
-void IOProcess::ReadFile(const string &path,const vector<string> &features)
+void IOProcess::ReadFile(const string &path,vector<string> &features)
 {
-	FILE *fp;
-	char szBuf[1000];
+	char szBuf[100000];
     ifstream infile(path);
-    while(infile.getline(szBuf,1000))
+    while(infile.getline(szBuf,100000))
     {
-    	istringstream s(szBuf)
-    	string path;
-    	s>>path;
-    	features.push_back(path);
+    	features.push_back(szBuf);
     }
     infile.close();
     return;
@@ -30,18 +27,15 @@ void IOProcess::ReadFile(const string &path,const vector<string> &features)
 
 
 
-void  IOProcess::WriteFile(const string &path,const vector<string> &features)
+void  IOProcess::WriteFile(const string &path,vector<string> &features)
 {
 	string temp;
 	for (std::vector<string>::iterator i = features.begin(); i != features.end(); ++i)
 	{
 		temp = (*i) + "\n";
-		Write(path,(*i).str());
+		Write(path,(*i));
 	}
-	data<<"\n";
-	
 }
-
 
 
 
