@@ -106,7 +106,7 @@ void Cluster::GetClusterCenter(vector<FeatureStrcut> &samples,vector<int> &index
 	//所有特征相加
 	for (int j = 0; j != sampleSize; ++j)
 	{
-		math.VectorMul(sumTemp,samples[indexVec[j],sumTemp);
+		math.VectorMul(sumTemp,samples[indexVec[j]],sumTemp);
 	}
 	//除以特征个数，并记录聚类中心
 	for (int z = 0; z != featureDimension; ++z)
