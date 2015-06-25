@@ -11,7 +11,7 @@ class MathFunction
 public:
 	MathFunction();
 	~MathFunction();
-	int VectorMul(const vector<double> &featureA,const vector<double> &featureB,vector<double> &output);
+	int VectorMul(vector<double> &featureA,vector<double> &featureB,vector<double> &output);
 	int VectorSub(const vector<double> &featureA,const vector<double> &featureB,vector<double> &output);
 	double VectorLength(const vector<double> &feature);
 	double VectorDot(const vector<double> &featureA,const vector<double> &featureB);

@@ -40,6 +40,7 @@ double MathFunction::VectorLength(const vector<double> &feature)
 	{
 		temp += feature[i] * feature[i];
 	}
+	return temp;
 }
 
 
