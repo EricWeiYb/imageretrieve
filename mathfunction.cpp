@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "mathfunction.h"
 
 /*
@@ -63,8 +63,8 @@ int MathFunction::VectorSub(const vector<double> &featureA,
 }
 
 
-int MathFunction::VectorMul(const vector<double> &featureA,
-				const vector<double> &featureB,
+int MathFunction::VectorMul(vector<double> &featureA,
+				vector<double> &featureB,
 				vector<double> &output)
 {
 	if(featureA.size() != featureB.size())
